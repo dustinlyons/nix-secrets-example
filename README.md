@@ -7,7 +7,7 @@ EDITOR=vim nix run github:ryantm/agenix -- -e root-password.age
 ```
 ## Yubikey
 ### Age encrypt a file to multiple Yubikeys
-For future usecases, but not really needed anymore.
+I used this to encrypt my initial set of "bootstrap" keys across a few Yubikeys.
 ```sh
 age-plugin-yubikey --identity > identities
 ```
@@ -19,7 +19,7 @@ age $identities -o file.age file
 ```
 
 ### Decrypt agenix SSH key with Yubikey
-If you need the keys associated with these age files, decrypt them with our Yubikey.
+Used this to read the keys for the initial bootstrap, then I delete them.
 ```sh
 age-plugin-yubikey --identity > identity 2>/dev/null
 ```
