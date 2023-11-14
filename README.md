@@ -5,8 +5,8 @@ This repository has private age-encrypted files used by Nix agenix.
 ```sh
 EDITOR=vim nix run github:ryantm/agenix -- -e root-password.age
 ```
-
-## Age encrypt a file to multiple Yubikeys
+## Yubikey
+### Age encrypt a file to multiple Yubikeys
 For future usecases, but not really needed anymore.
 ```sh
 age-plugin-yubikey --identity > identities
@@ -18,7 +18,7 @@ identities=$(cat identities | grep Recipient | sed -e "s/ //g" | cut -d':' -f2 |
 age $identities -o file.age file
 ```
 
-## Decrypt agenix SSH key with Yubikey
+### Decrypt agenix SSH key with Yubikey
 If you need the keys associated with these age files, decrypt them with our Yubikey.
 ```sh
 age-plugin-yubikey --identity > identity 2>/dev/null
