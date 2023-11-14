@@ -1,5 +1,5 @@
-# secrets-nix
-This repository has private age-encrypted files used by Nix agenix.
+# secrets-nix-example
+This is an example of my `nix-secrets` repository.
 
 ## Create or edit an existing secret for use in Nix
 ```sh
