@@ -7,7 +7,10 @@ EDITOR=vim nix run github:ryantm/agenix -- -e root-password.age
 ```
 ## Yubikey
 ### Age encrypt a file to multiple Yubikeys
-I used this to encrypt my "bootstrap" keys to a set of Yubikeys.
+I used this to encrypt my "bootstrap" keys to a set of Yubikeys. From my `nixos-config` working directory:
+```sh
+nix develop
+```
 ```sh
 age-plugin-yubikey --identity > identities
 ```
