@@ -3,7 +3,7 @@ This is an example of my `nix-secrets` repository.
 
 ## Create or edit an existing secret for use in Nix
 ```sh
-EDITOR=vim nix run github:ryantm/agenix -- -e root-password.age
+EDITOR=vim nix run github:ryantm/agenix -- -e secret.age
 ```
 ## Yubikey
 ### Age encrypt a file to multiple Yubikeys
