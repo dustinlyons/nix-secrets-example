@@ -22,7 +22,7 @@ age $identities -o file.age file
 ```
 
 ### Decrypt agenix SSH key with Yubikey
-Used this to read the keys for the initial bootstrap.
+Used this to read keys for the initial bootstrap. I delete the decrypted keys after use.
 ```sh
 age-plugin-yubikey --identity > identity 2>/dev/null
 ```
