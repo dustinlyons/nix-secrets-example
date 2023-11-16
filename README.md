@@ -8,7 +8,7 @@ You'll want to keep them secure and available in the event you're forced to rein
 # How I manage keys
 I first created an EdDSA public/private key pair to use for `agenix`, and then I `age` encrypted them to a set of three Yubikeys I use in my daily life. In this way, they're backed up and the key to read them is stored away in something secure I'm already using.
 
-If I wanted, I could also probably [store the encrypted keys as paper.](https://www.jabberwocky.com/software/paperkey/). But I prefer the Yubikey approach.
+If I wanted, I could also probably [store the encrypted keys as paper](https://www.jabberwocky.com/software/paperkey/). But I prefer the Yubikey approach.
 
 Here are the steps I took to create secrets from Yubikeys.
 
