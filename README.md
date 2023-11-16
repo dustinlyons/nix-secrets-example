@@ -3,12 +3,8 @@ This is an example of my `nix-secrets` repository, used in [`nixos-config`](http
 
 To get started, you need a set of SSH keys that will persist between installations. 
 
-You'll want to keep them secure and also available in the event you're forced to reinstall the OS.
+You'll want to keep them secure and available in the event you're forced to reinstall the OS.
 
-## Create or edit an existing secret for use in Nix
-```sh
-EDITOR=vim nix run github:ryantm/agenix -- -e secret.age
-```
 # How I manage keys
 I first created an EdDSA public/private key pair to use for `agenix`, and then I `age` encrypted them to a set of three Yubikeys I use in my daily life. In this way, they're backed up and the key to read them is stored away in something secure I'm already using.
 
@@ -16,8 +12,8 @@ If I wanted, I could also probably [store the encrypted keys as paper.](https://
 
 Here are the steps I took to create secrets from Yubikeys.
 
-# Create agenix secret from multiple Yubikeys
-### Encrypt to multiple Yubikeys
+## Yubikeys
+### Encrypt keys to multiple Yubikeys
 I used this to encrypt my "bootstrap" keys to a set of Yubikeys. From my `nixos-config` working directory:
 
 Bring in `age` and `yubikey` related tools. This is currently defined [here](https://github.com/dustinlyons/nixos-config/blob/main/flake.nix#L44).
