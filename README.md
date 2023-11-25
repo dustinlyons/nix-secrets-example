@@ -21,12 +21,12 @@ Bring in `age` and `yubikey` related tools. This is currently defined [here](htt
 nix develop
 ```
 
-Export `yubikey` identities
+Export `yubikey` identities.
 ```sh
 age-plugin-yubikey --identity > identities
 ```
 
-This cryptic shit makes the identities suitable for use in the next step.
+This cryptic shit makes the identities suitable for use in the next step. ChatGPT wrote it.
 ```sh
 identities=$(cat identities | grep Recipient | sed -e "s/ //g" | cut -d':' -f2 | sed -e 's/^age\(.*\)/ -r age\1/g'  | tr -d '\n')
 ```
